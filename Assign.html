@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <title>Assignment 1</title>
+
+    <style type="text/css">
+        #head
+        {
+            text-align: center;
+            color: blue;
+            font-family:'Source Sans Pro', sans-serif;
+            font-size: 300%;
+        }
+        .headbutton{
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            border-radius: 4px;
+            margin: 5px;
+            font-size: 80%;
+        }
+        .headbutton:hover{
+            background-color:rgb(75, 141, 202);
+        }
+        .left{
+            text-align: left;
+        }
+        .purple{
+            color:blueviolet;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        .shadowed{
+            margin: 5px 5px 5px 30px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
+        }
+        hr.light {
+        border: 1px solid rgb(194, 194, 194);
+        }
+        hr.dark {
+        border: 1px solid black;
+        }
+        input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: none;
+            border-bottom: 2px solid red;
+        }
+    </style>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="#">
+        <img
+          src="data:image/jpeg;base64,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"
+          width="30"
+          height="30"
+          class="d-inline-block align-top"
+          alt=""
+        />
+      <a class="navbar-brand" href="#">Welcome</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Other Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    
+    <br>
+    
+    <p id="head">Timeline</p>
+    
+    <div style="background-color: rgb(49, 122, 116);text-align: center;" >
+        <button class="headbutton btn btn-primary" onclick="alert('Hmmmmm')"> 
+            ADD NEW EVENT 
+        </button>
+        <br>
+     
+    </div>
+    <div class="card-group">
+        <div class="col-sm-4">
+            <div class="e0 shadowed card text-center" style="width: 25rem;">
+                <img class="card-img-top" src="https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap">
+                <div class="e-card-body card-body">
+                    <h3 class="card-title">Coming Soon</h3>
+                    <h4 class="purple">Inspirational Speech</h4>
+                    <hr class="dark">
+                    <p class="card-text">
+                      Some quick example text to build on the card title and make up the bulk of the card's content.
+                      Some quick example text to build on the card title and make up the bulk of the card's content.
+                      Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </p>
+                    <hr class="dark">
+                    <h4 class="purple left">Categories:</h4>
+                      <hr>
+                      <span class="cat"></span>
+                    <h4 class="purple left">Days:</h4>
+                      <hr>
+                      <span class="days"></span>
+                    <p class="card-text" style="background-color: yellow; border-radius: 4px;"><b>Rulebook URL: </b><a href="www.example.com">www.example.com</a></p>
+                    <button type="button" class="btn" style="background-color: rgb(253, 192, 23);color:white ;" data-toggle="modal" data-target=".myModal:first">
+                      <img src="edit.png" width="20px" height="5%">&nbsp; &nbsp;Edit &nbsp;  
+                    </button>
+                    <div class="myModal modal fade" role="dialog">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                  <h4 class="modal-title">Edit Event 0</h4>
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="e-modal-body modal-body" style="font-size: 110%">
+                                  <p>Some text in the modal.</p>
+                                  <form>
+                                    <label for="eImg">Img URL</label>
+                                    <input type="text" name="eImg" value="https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                                    <label for="ename">Event Name</label>
+                                    <input type="text" name="ename" value="Star Party">
+                                    <label for="etype">Event Type</label>
+                                    <input type="text" name="etype" value="All-Night Observation">
+                                    <label for="eDes">Event Description</label>
+                                    <input type="text" name="eDes" value="Lorem ipsum and other stuff">
+                                    <label for="eUrl">Rulebook URL</label>
+                                    <input type="text" name="eUrl" value="https://www.instagram.com/sedscelestia/">
+                                    <label for="eCat">Category</label>
+                                    <div class="container">
+                                        <div class="row">
+                                          <div class="col-sm-1">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7jF7WFYv4TZLdZs5Mxi-2EQ79ji5PCdLZuOUkG8dVxPBx1Dvs" width="36px" style="margin-top: 13px">
+                                          </div>
+                                          <div class="col-sm-11">
+                                            <input class="inp-add-item" type="text" id="eCat" name="eCat">
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <ul id="item-list" class="list-group"> 
+                                      <li class="list-group-item list-group-item-primary">Example item<span class="close">&times;</span></li>
+                                    </ul>
+                                    <label for="eDays">Details</label>
+                                    <div class="container">
+                                      <div class="row">
+                                        <div class="col-sm-1">
+                                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7jF7WFYv4TZLdZs5Mxi-2EQ79ji5PCdLZuOUkG8dVxPBx1Dvs" width="36px" style="margin-top: 13px">
+                                        </div>
+                                        <div class="col-sm-2">
+                                          <input type="text" name="eDays" placeholder="Day">
+                                        </div>
+                                        <div class="col-sm-3">  
+                                          <input type="text" name="eDays" placeholder="Session">
+                                        </div>
+                                        <div class="col-sm-3">  
+                                          <input type="text" name="eDays" maxlength="4" placeholder="Time">
+                                        </div>
+                                        <div class="col-sm-3">  
+                                          <input type="text" name="eDays" placeholder="Venue">
+                                        </div>
+                                      </div>
+                                    </div>  
+                                  </form>  
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" onclick="javascript:window.location.reload()" class="btn btn-default" data-dismiss="modal">Save Changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="e0rmv btn btn-danger" style="background-color: rgb(255, 0, 0)" data-eventnum="first" ><img src="remove.png" width="20px" height="5%"> Remove</button>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      $(".e0rmv").click(function(){
+        console.log(this);
+       $(this.parentElement.parentElement).fadeOut("slow");
+      });
+    
+      console.log(document.getElementsByClassName("myModal")[0]);
+      
+      var e0catarr=["Test1","Pink pigs fly","HBD Golu"];
+      //console.log(e0catarr.length);
+      if(document.getElementById("eCat").value != null && document.getElementById("eCat").value != ""){
+        e0catarr[e0catarr.length] = document.getElementById("eCat").value;
+      }
+      //console.log(e0catarr.length);
+      /*
+      for(var i=0 ;i < e0catarr.length ; i++){
+        document.getElementById("e0cat").innerHTML = document.getElementById("e0cat").innerHTML + e0catarr[i]+ "<hr>";
+      }
+      */
+      var e0daysarr=[["Eliminator","1100","Auditorium"],["Semis","1100","Auditorium"],["Finale","1100","Auditorium"]];
+      
+      
+      /*
+      for(var i=0 ;i < e0daysarr.length ; i++){
+        document.getElementById("e0days").innerHTML = document.getElementById("e0days").innerHTML + "Day " + (i+1) + ": " + e0daysarr[i][0] + "  " + e0daysarr[i][1] + "  " + e0daysarr[i][2] +"<hr>";
+      }
+      */
+      if (document.getElementsByClassName("e-modal-body")[0].children[1][0].value != null){
+        document.getElementsByClassName("e0")[0].firstElementChild.src =document.getElementsByClassName("e-modal-body")[0].children[1][0].value;
+      }
+      
+      /*
+      document.getElementsByClassName("e-modal-body")[0].children[1][4].value=""; //URL value
+      document.getElementsByClassName("e-modal-body")[0].children[1][5].value=""; //category value
+      document.getElementsByClassName("e-modal-body")[0].children[1][6].value=""; //day value
+      document.getElementsByClassName("e-modal-body")[0].children[1][7].value=""; //session value
+      document.getElementsByClassName("e-modal-body")[0].children[1][8].value=""; //time value
+      document.getElementsByClassName("e-modal-body")[0].children[1][9].value=""; //venue
+      */
+      //title
+      document.getElementsByClassName("e-card-body")[0].children[0].innerHTML=document.getElementsByClassName("e-modal-body")[0].children[1][1].value;
+      //event type
+      document.getElementsByClassName("e-card-body")[0].children[1].innerHTML=document.getElementsByClassName("e-modal-body")[0].children[1][2].value;
+      //event details
+      document.getElementsByClassName("e-card-body")[0].children[3].innerHTML=document.getElementsByClassName("e-modal-body")[0].children[1][3].value;
+      //Rulebook URL
+      document.getElementsByClassName("e-card-body")[0].children[11].innerHTML="<b>Rulebook URL: </b> <a href=" + document.getElementsByClassName("e-modal-body")[0].children[1][4].value +">"+document.getElementsByClassName("e-modal-body")[0].children[1][4].value+"</a>";
+      // document.getElementsByClassName("e-card-body")[0].children[11].innerHTML=document.getElementsByClassName("e-modal-body")[0].children[1][4].value;
+
+      /*
+      document.getElementsByClassName("e-card-body")[0].children[].innerHTML=document.getElementsByClassName("e-modal-body")[0].children[1][].value;
+      document.getElementsByClassName("e-card-body")[0].children[].innerHTML=document.getElementsByClassName("e-modal-body")[0].children[1][].value;
+      document.getElementsByClassName("e-card-body")[0].children[].innerHTML=document.getElementsByClassName("e-modal-body")[0].children[1][].value;
+      document.getElementsByClassName("e-card-body")[0].children[].innerHTML=document.getElementsByClassName("e-modal-body")[0].children[1][].value;
+      document.getElementsByClassName("e-card-body")[0].children[].innerHTML=document.getElementsByClassName("e-modal-body")[0].children[1][].value;
+      document.getElementsByClassName("e-card-body")[0].children[].innerHTML=document.getElementsByClassName("e-modal-body")[0].children[1][].value;
+      */
+      //console.log(document.getElementsByClassName("e"));
+      //console.log(document.getElementsByClassName("e-card-body")[0].children);
+      //console.log(document.getElementsByClassName("e-modal-body")[0].children);
+      /*
+      document.getElementsByClassName("e-card-body")[0].children[0].innerHTML //title
+      document.getElementsByClassName("e-card-body")[0].children[3].innerHTML //para
+      document.getElementsByClassName("e-card-body")[0].children[7].innerHTML //categories
+      document.getElementsByClassName("e-card-body")[0].children[10].innerHTML //details
+      document.getElementsByClassName("e-card-body")[0].children[11].innerHTML //URL
+      document.getElementsByClassName("e-card-body")[0].children[13].innerHTML //modal
+      document.getElementsByClassName("e-modal-body")[0].children[1][0].value=; //img link value
+      document.getElementsByClassName("e-modal-body")[0].children[1][1].value=; //event name value
+      document.getElementsByClassName("e-modal-body")[0].children[1][2].value=; //event type value
+      document.getElementsByClassName("e-modal-body")[0].children[1][3].value=; //Event description value
+      document.getElementsByClassName("e-modal-body")[0].children[1][4].value=; //URL value
+      document.getElementsByClassName("e-modal-body")[0].children[1][5].value=; //category value
+      document.getElementsByClassName("e-modal-body")[0].children[1][6].value=; //day value
+      document.getElementsByClassName("e-modal-body")[0].children[1][7].value=; //session value
+      document.getElementsByClassName("e-modal-body")[0].children[1][8].value=; //time value
+      document.getElementsByClassName("e-modal-body")[0].children[1][9].value=; //venue value
+      */
+      $(".inp-add-item").on("input", () => {
+        $("#output-add-item").text($("#inp-add-item").val());
+      });
+      console.log(document.getElementsByClassName("cat")[0].innerHTML);
+      $(".inp-add-item").keypress(event => {
+        if (event.keyCode === 13) {
+          // keyCode 13 represents Enter key
+          const newItem = $(".inp-add-item").val();
+          document.getElementsByClassName("cat")[0].innerHTML = document.getElementsByClassName("cat")[0].innerHTML + newItem + "<hr>";
+          if (newItem === "") return;
+          $(".inp-add-item").val("");
+          $(".output-add-item").text("");
+
+          $("#item-list").append(
+            `<li class="list-group-item list-group-item-primary">${newItem}<span class="close">&times;</span></li>`
+          );
+      }
+    });
+    $("#item-list").on("click", ".close", event => {
+    $(event.target)
+      .parent() 
+      .fadeOut(1100, function() {
+      $(this).remove();
+      });
+  });
+    </script>
+    <!-- for(var i=0 ;i < e0catarr.length + 1 ; i++) -->
+
+  </body>
+</html>
